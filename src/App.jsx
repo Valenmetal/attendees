@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0e0e12] text-white p-6 space-y-6">
       <DashboardHeader />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <GenderChart />
         <TicketTypeChart />
       </div>

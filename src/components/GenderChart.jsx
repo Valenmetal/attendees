@@ -36,7 +36,7 @@ export default function GenderChart() {
                 position: 'bottom',
                 labels: {
                     color: 'white',
-                    boxWidth: 12,
+                    boxWidth: 11,
                     padding: 20,
                     usePointStyle: true,
                 },
@@ -56,7 +56,7 @@ export default function GenderChart() {
     return (
         <div className="bg-[#1f1f29] p-4 rounded-xl">
             <h2 className="mb-4 text-lg font-semibold">Gender Distribution</h2>
-            <div className="w-full max-w-[300px] mx-auto">
+            <div className="w-full max-w-[30vw] mx-auto">
                 <Doughnut data={data} options={options} />
             </div>
         </div>
