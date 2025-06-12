@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "packageManager": "pnpm@8.15.3",
   "dependencies": {
     "@tailwindcss/node": "^4.1.10",
     "@tailwindcss/vite": "^4.1.10",
