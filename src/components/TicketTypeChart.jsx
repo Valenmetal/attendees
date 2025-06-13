@@ -1,7 +1,6 @@
 import { Bar } from 'react-chartjs-2';
-import {
-    Chart as ChartJS
-} from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 
 export default function TicketTypeChart() {
@@ -62,8 +61,11 @@ export default function TicketTypeChart() {
     };
 
     return (
-        <div className="bg-[#1f1f29] p-4 rounded-xl">
-            <h2 className="mb-4 text-lg font-semibold">Gender by Ticket Type</h2>
+        <div className="bg-[#242424] p-4 rounded-lg">
+            <div className="flex justify-between items-center mb-4">
+                <h2 className="text-lg font-semibold">Gender by Ticket Type</h2>
+                <button className="p-1 px-2 rounded-full hover:bg-neutral-700">⋮</button>
+            </div>
             <Bar data={data} options={options} />
         </div>
     );

@@ -1,6 +1,4 @@
 import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 export default function AgeGroups() {
     const data = {
@@ -11,11 +9,23 @@ export default function AgeGroups() {
             { label: 'Other', data: [7, 8, 7, 12, 1], backgroundColor: 'rgb(44, 90, 226)' },
         ],
     };
-
+    const options = {
+        scales: {
+            x: {
+                grid: { color: 'rgb(0, 0, 0,0)' },
+            },
+            y: {
+                grid: { color: 'rgb(0, 0, 0,0)' },
+            },
+        },
+    };
     return (
-        <div className="bg-[#1f1f29] p-4 rounded-xl">
-            <h2 className="mb-4 text-lg font-semibold">Age Groups By Gender</h2>
-            <Bar data={data} />
+        <div className="bg-[#242424] p-4 rounded-lg">
+            <div className="flex justify-between items-center mb-4">
+                <h2 className="text-lg font-semibold">Age Groups By Gender</h2>
+                <button className="p-1 px-2 rounded-full hover:bg-neutral-700">⋮</button>
+            </div>
+            <Bar data={data} options={options} />
         </div>
     );
 }

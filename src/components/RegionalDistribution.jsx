@@ -1,5 +1,4 @@
 import DataTable from "react-data-table-component";
-
 const columns = [
     { name: "Region", selector: row => row.region, sortable: true },
     { name: "Attendees", selector: row => row.attendees },
@@ -26,6 +25,7 @@ const customStyles = {
     headRow: {
         style: {
             backgroundColor: 'transparent',
+
         },
     },
     rows: {
@@ -36,7 +36,7 @@ const customStyles = {
     },
     headCells: {
         style: {
-            color: 'white',
+            color: '#696969',
         },
     },
     cells: {
@@ -48,10 +48,10 @@ const customStyles = {
 
 export default function RegionalDistribution() {
     return (
-        <div className="bg-[#1f1f29] p-4 rounded-xl">
+        <div className="bg-[#242424] p-4 rounded-lg">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg font-semibold">Regional Distribution of Attendees</h2>
-                <button className="text-sm text-blue-400 hover:underline">Export Data</button>
+                <button className="text-sm p-1 px-3 rounded-sm bg-[#1cd6a8] text-black font-medium">Export Data</button>
             </div>
             <DataTable columns={columns} data={data} customStyles={customStyles} />
         </div>
